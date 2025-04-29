@@ -1,9 +1,15 @@
 type Props = {
-  onCounter: () => void;
+  onPlus: () => void;
+  onMinus: () => void;
 };
 
-const ClickCounter = ({ onCounter }: Props) => {
-  return <button onClick={onCounter}>Click Counter</button>;
+const ClickCounter = ({ onPlus, onMinus }: Props) => {
+  return (
+    <>
+      <button onClick={onPlus}>Click +</button>
+      <button onClick={onMinus}>Click -</button>
+    </>
+  );
 };
 
 export default ClickCounter;

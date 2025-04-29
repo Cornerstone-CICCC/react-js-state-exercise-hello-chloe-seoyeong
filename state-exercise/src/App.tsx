@@ -26,9 +26,12 @@ function App() {
       Math.floor(Math.random() * 50),
     ]);
   };
-  console.log(lottoNumbers);
-  const handleCounter = () => {
+
+  const handleIncrement = () => {
     setCount((prev) => prev + 1);
+  };
+  const handleDecrement = () => {
+    setCount((prev) => prev - 1);
   };
 
   return (
@@ -68,7 +71,7 @@ function App() {
       </div>
 
       <h2>Click Counter</h2>
-      <ClickCounter onCounter={handleCounter} />
+      <ClickCounter onPlus={handleIncrement} onMinus={handleDecrement} />
       <div className="output">{count}</div>
     </>
   );
