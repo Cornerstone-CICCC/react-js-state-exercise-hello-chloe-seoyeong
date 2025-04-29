@@ -6,9 +6,7 @@ import LottoNumbers from "./components/LottoNumbers";
 
 function App() {
   const [isLightOn, setIsLightOn] = useState<boolean>(true);
-  const [lottoNumbers, setLottoNumbers] = useState<number[]>([
-    1, 2, 3, 4, 5, 6, 7,
-  ]);
+  const [lottoNumbers, setLottoNumbers] = useState<number[]>([]);
   const [count, setCount] = useState<number>(0);
 
   const handleLightToggle = () => {
